@@ -1,0 +1,12 @@
+@use '../../color-palette.scss' as cp;
+
+.huddle-landing-page__text {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  margin: 1em 0;
+  outline: none;
+  border: none;
+  padding: 0;
+  color: cp.$soft-white;
+}

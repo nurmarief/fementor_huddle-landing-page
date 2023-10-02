@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../breakpoints.scss' as br;
+
+.site-logo {
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 9em;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "extra-small")}) {
+    & {
+      width: 12em;
+    }
+  }
+}

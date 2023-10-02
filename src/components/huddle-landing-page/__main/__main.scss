@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../../breakpoints.scss' as br;
+
+.huddle-landing-page__main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2em;
+  margin: 4em 0;
+  outline: none;
+  border: none;
+  padding: 0 2em;
+  text-align: center;
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "small")}) {
+    & {
+      margin: 3em 0;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+    }
+  }
+}

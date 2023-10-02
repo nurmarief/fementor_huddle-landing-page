@@ -1,0 +1,20 @@
+@use '../../color-palette.scss' as cp;
+
+.share-button-group__button {
+  display: inline-block;
+  outline: none;
+  border: 1px solid cp.$white;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0.5em;
+  width: 1em;
+  height: 1em;
+  color: cp.$white;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: cp.$soft-magenta;
+    color: cp.$soft-magenta;
+    transition: all 0.3s;
+  }
+}

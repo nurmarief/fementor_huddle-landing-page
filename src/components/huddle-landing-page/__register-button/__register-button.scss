@@ -1,0 +1,43 @@
+@use 'sass:map';
+@use '../../breakpoints.scss' as br;
+@use '../../color-palette.scss' as cp;
+
+.huddle-landing-page__register-button {
+  display: block;
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  border-radius: 1.5em;
+  padding: 0.5em 1em;
+  width: 15em;
+  background-color: cp.$white;
+  color: cp.$violet;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: cp.$button-box-shadow;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: cp.$soft-magenta;
+    color: cp.$white;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+
+  &:active {
+    box-shadow: cp.$button-box-shadow-inset;
+  }
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "small")}) {
+    & {
+      margin: 0 0;
+      width: 10em;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../breakpoints.scss' as br;
+
+.share-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  outline: none;
+  border: none;
+  margin: 0 auto;
+  width: fit-content;
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "small")}) {
+    & {
+      margin: 0 0 0 auto;
+    }
+  }
+}

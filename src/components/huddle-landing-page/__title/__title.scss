@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../../breakpoints.scss' as br;
+@use '../../color-palette.scss' as cp;
+
+.huddle-landing-page__title {
+  font-size: 1.5em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0;
+  outline: none;
+  border: none;
+  padding: 0;
+  color: cp.$white;
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "extra-small")}) {
+    & {
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "medium")}) {
+    & {
+      font-size: 3em;
+    }
+  }
+}

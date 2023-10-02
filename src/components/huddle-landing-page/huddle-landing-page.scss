@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '../breakpoints.scss' as br;
+@use '../color-palette.scss' as cp;
+
+.huddle-landing-page {
+  outline: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: cp.$violet;
+  background-image: url('images/bg-mobile.svg');
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: #{map.get(br.$breakpoints, "extra-small")}) {
+    & {
+      background-image: url('images/bg-desktop.svg');
+    }
+  }
+}
